@@ -14,6 +14,12 @@ import { RouterOutlet } from '@angular/router';
 
 export class LayoutComponent {
 
-  sidenavWidth: number = 250;
+  sidenavWidth = 250;
+  isCollapsed = false;
+
+  onToggleSidenav(collapsed: boolean): void {
+    this.isCollapsed = collapsed;
+    this.sidenavWidth = collapsed ? 65 : 250;
+  }
 
 }

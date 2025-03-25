@@ -1,6 +1,6 @@
 <div class="sidenav-header">
-    <img width="150" height="150" [src]="userImg" alt="user photo" />
-    <div class="header-text">
+    <img [width]="imgWidth" [height]="imgWidth" [src]="userImg" alt="user photo" />
+    <div *ngIf="!collapsed" class="header-text">
         <h3>Francisco J. Pinto</h3>
         <p>Desarrollador Full Stack</p>
     </div>
@@ -10,9 +10,10 @@
 
 <mat-nav-list>
     <a mat-list-item *ngFor="let item of menuItems()" 
+    [matTooltip]="collapsed ? item.label : ''" matTooltipPosition="right"
     [routerLink]="item.route" 
     routerLinkActive="active-link">
         <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
-        <span matListItemTitle matLine>{{ item.label }}</span>
+        <span class="menuLabel" matListItemTitle matLine [class.hidden]="collapsed" >{{ item.label }}</span>
     </a>
 </mat-nav-list>

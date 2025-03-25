@@ -5,3 +5,8 @@ mat-sidenav-container {
 mat-sidenav {
  background-color: rgb(235, 237, 237);
 }
+
+::ng-deep mat-sidenav {
+    transition: width 0.3s ease;
+    overflow-x: hidden; // para que lo que quede afuera no moleste visualmente
+  }

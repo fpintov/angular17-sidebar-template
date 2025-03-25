@@ -39,4 +39,15 @@ mat-divider {
     opacity: 0.95;
   }
   
+  .label {
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .label.hidden {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+  
   

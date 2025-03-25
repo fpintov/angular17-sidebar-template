@@ -1,11 +1,11 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav mode="side" opened [style.width.px]="sidenavWidth">
-        <app-sidenav></app-sidenav>
+        <app-sidenav [collapsed]="isCollapsed"></app-sidenav>
     </mat-sidenav>
 
-    <mat-sidenav-content>
+    <mat-sidenav-content [style.margin-left.px]="sidenavWidth">
 
-        <app-header></app-header>
+        <app-header (toggleSidenav)="onToggleSidenav($event)"></app-header>
 
         <main>
             <router-outlet></router-outlet>

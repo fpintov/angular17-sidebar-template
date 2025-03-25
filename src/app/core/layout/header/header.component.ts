@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon'; 
 import { CommonModule } from '@angular/common';
@@ -10,5 +10,14 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+
+  collapsed = signal(false);
+
+  @Output() toggleSidenav = new EventEmitter<boolean>();
+
+  toggle(): void {
+    this.collapsed.set(!this.collapsed());
+    this.toggleSidenav.emit(this.collapsed());
+  }
 
 }
