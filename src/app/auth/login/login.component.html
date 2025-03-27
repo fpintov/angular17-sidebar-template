@@ -1,0 +1,30 @@
+<!-- glassmorphism style -->
+<div class="login-page">
+    <div class="login-container">
+      <h2>Login</h2>
+  
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Username</mat-label>
+          <input matInput formControlName="username" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" formControlName="password" />
+        </mat-form-field>
+  
+        <div class="options">
+          <mat-checkbox formControlName="remember">Remember me</mat-checkbox>
+          <a href="#" class="link">Forgot Password?</a>
+        </div>
+  
+        <button mat-flat-button color="primary" class="login-btn" type="submit">Login</button>
+      </form>
+  
+      <p class="register-text">
+        Don’t have an account? <a href="#" class="link">Register</a>
+      </p>
+    </div>
+  </div>
+  
