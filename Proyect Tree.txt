@@ -1,0 +1,42 @@
+SIDEBAR-ANGULAR-TEMPLATE
+│
+├── node_modules/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── dashboard/
+│   │   │   ├── home/
+│   │   │   ├── tables/
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── login/
+│   │   │   ├── reset-password/
+│   │   │   ├── verify-code/
+│   │   │
+│   │   ├── core/
+│   │   │   └── layout/
+│   │   │       ├── footer/
+│   │   │       ├── header/
+│   │   │       ├── layout/
+│   │   │       ├── models/
+│   │   │       ├── sidenav/
+│   │   │
+│   │   ├── app.component.html
+│   │   ├── app.component.scss
+│   │   ├── app.component.ts
+│   │   ├── app.config.ts
+│   │   ├── app.routes.ts
+│
+├── assets/
+│   ├── img/
+├── index.html
+├── main.ts
+├── styles.scss
+├── editorconfig
+├── angular.json
+├── package-lock.json
+├── README.md
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.spec.json

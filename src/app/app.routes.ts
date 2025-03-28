@@ -2,11 +2,31 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TablesComponent } from './components/tables/tables.component';
+import { LayoutComponent } from './core/layout/layout/layout.component';
+import { LoginV1Component } from './auth/login-v1/login-v1.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent }, // Ruta por defecto ("/")
-    { path: 'home', component: HomeComponent }, // Ruta por defecto ("/")
-    { path: 'about', component: DashboardComponent }, // Ruta "/about"
-    { path: 'tablas', component: TablesComponent }, // Ruta por defecto ("/")
-    { path: '**', redirectTo: '' } // Ruta comodín para manejar 404
-];
+    {
+      path: '',
+      redirectTo: 'login',
+      pathMatch: 'full'
+    },
+    {
+      path: 'login',
+      component: LoginV1Component
+    },
+    {
+      path: '',
+      component: LayoutComponent,
+      children: [
+        { path: 'home', component: HomeComponent },
+        { path: 'dashboard', component: DashboardComponent },
+        { path: 'tablas', component: TablesComponent }
+      ]
+    },
+    {
+      path: '**',
+      redirectTo: 'login'
+    }
+  ];
+  

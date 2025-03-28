@@ -1,12 +1,21 @@
 mat-sidenav-container {
-    height: calc(100vh - 64px);
+  height: 100vh;
+}
+
+mat-sidenav-content {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; // importante mantener este para que funcione el flex
 }
 
 mat-sidenav {
  background-color: rgb(235, 237, 237);
+ transition: width 0.3s ease;
+ overflow-x: hidden; // para que lo que quede afuera no moleste visualmente
 }
 
-::ng-deep mat-sidenav {
-    transition: width 0.3s ease;
-    overflow-x: hidden; // para que lo que quede afuera no moleste visualmente
-  }
+main {
+    flex: 1; // Para que ocupe el espacio disponible entre header y footer
+    padding: 10px 10px 15px 25px; //TRBL
+    overflow: auto;
+}

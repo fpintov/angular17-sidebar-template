@@ -25,7 +25,7 @@ export class SidenavComponent {
   @Input() collapsed = false;
 
   menuItems = signal<MenuItem[]>([
-    { icon: 'home', label: 'Home', route: '/' },
+    { icon: 'home', label: 'Home', route: '/home' },
     { icon: 'dashboard', label: 'Dashboard', route: '/dashboard' },
     { icon: 'tables', label: 'Tablas', route: '/tablas' },
   ])
