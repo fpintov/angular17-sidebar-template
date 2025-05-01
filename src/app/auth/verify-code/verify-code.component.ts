@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-verify-code',
   imports: [],
   templateUrl: './verify-code.component.html',
-  styleUrl: './verify-code.component.scss'
+  styleUrls: ['./verify-code.component.scss'],
 })
 export class VerifyCodeComponent {
 

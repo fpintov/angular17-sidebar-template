@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-login-v2',
   imports: [],
   templateUrl: './login-v2.component.html',
-  styleUrl: './login-v2.component.scss'
+  styleUrls: ['./login-v2.component.scss'],
 })
 export class LoginV2Component {
 

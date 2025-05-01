@@ -6,27 +6,28 @@ import { LayoutComponent } from './core/layout/layout/layout.component';
 import { LoginV1Component } from './auth/login-v1/login-v1.component';
 
 export const routes: Routes = [
-    {
-      path: '',
-      redirectTo: 'login',
-      pathMatch: 'full'
-    },
-    {
-      path: 'login',
-      component: LoginV1Component
-    },
-    {
-      path: '',
-      component: LayoutComponent,
-      children: [
-        { path: 'home', component: HomeComponent },
-        { path: 'dashboard', component: DashboardComponent },
-        { path: 'tablas', component: TablesComponent }
-      ]
-    },
-    {
-      path: '**',
-      redirectTo: 'login'
-    }
-  ];
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
+  },
+  {
+    path: 'login',
+    component: LoginV1Component,
+  },
+  {
+    path: 'app',
+    component: LayoutComponent,
+    children: [
+      { path: 'home', component: HomeComponent },
+      { path: 'dashboard', component: DashboardComponent },
+      { path: 'tablas', component: TablesComponent },
+    ],
+  },
+  {
+    path: '**',
+    redirectTo: 'login',
+  },
+];
+
   

@@ -17,7 +17,7 @@ import { MenuItem } from '../models/menu-item.model';
     MatTooltipModule,
     RouterModule],
   templateUrl: './sidenav.component.html',
-  styleUrl: './sidenav.component.scss'
+  styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent {
 

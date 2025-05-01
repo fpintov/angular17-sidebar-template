@@ -6,10 +6,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
+  standalone: true,
   selector: 'app-layout',
   imports: [MatSidenavModule, HeaderComponent, SidenavComponent, FooterComponent, RouterOutlet],
   templateUrl: './layout.component.html',
-  styleUrl: './layout.component.scss'
+  styleUrls: ['./layout.component.scss'],
 })
 
 export class LayoutComponent {

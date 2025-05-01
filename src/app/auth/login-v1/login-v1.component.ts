@@ -1,3 +1,4 @@
+// src/app/auth/login-v1/login-v1.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -5,7 +6,7 @@ import { Router } from '@angular/router';
   selector: 'app-login-v1',
   imports: [],
   templateUrl: './login-v1.component.html',
-  styleUrl: './login-v1.component.scss'
+  styleUrls: ['./login-v1.component.scss'],
 })
 export class LoginV1Component {
   showPassword = false;
@@ -17,6 +18,7 @@ export class LoginV1Component {
   }
 
   onSubmit(): void {
-    this.router.navigate(['/home']);
+    console.log('Login submit');
+    this.router.navigateByUrl('/app/home');
   }
 }

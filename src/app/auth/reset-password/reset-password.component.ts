@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-reset-password',
   imports: [],
   templateUrl: './reset-password.component.html',
-  styleUrl: './reset-password.component.scss'
+  styleUrls: ['./reset-password.component.scss'],
 })
 export class ResetPasswordComponent {
 
