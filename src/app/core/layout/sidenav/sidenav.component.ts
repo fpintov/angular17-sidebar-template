@@ -25,9 +25,9 @@ export class SidenavComponent {
   @Input() collapsed = false;
 
   menuItems = signal<MenuItem[]>([
-    { icon: 'home', label: 'Home', route: '/home' },
-    { icon: 'dashboard', label: 'Dashboard', route: '/dashboard' },
-    { icon: 'tables', label: 'Tablas', route: '/tablas' },
+    { icon: 'home', label: 'Home', route: '/app/home' },
+    { icon: 'dashboard', label: 'Dashboard', route: '/app/dashboard' },
+    { icon: 'tables', label: 'Tablas', route: '/app/tablas' },
   ])
 
   get imgWidth(): number {

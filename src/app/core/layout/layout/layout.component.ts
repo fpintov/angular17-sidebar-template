@@ -3,12 +3,20 @@ import { HeaderComponent } from '../header/header.component';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { FooterComponent } from "../footer/footer.component";
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-layout',
-  imports: [MatSidenavModule, HeaderComponent, SidenavComponent, FooterComponent, RouterOutlet],
+  imports: [
+    MatSidenavModule, 
+    HeaderComponent, 
+    SidenavComponent, 
+    FooterComponent, 
+    RouterOutlet,
+    MatTooltipModule
+  ],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
 })

@@ -1,7 +1,10 @@
 <mat-toolbar class="mat-elevation-z5">
     <button mat-icon-button (click)="toggle()">
         <mat-icon>menu</mat-icon>
-    </button>   
+    </button>
     <span class="spacer"></span>
     <!-- <button mat-button>Logout</button> -->
+    <button mat-icon-button matTooltip="Cerrar sesión" (click)="logout()" class="logout-button">
+        <mat-icon>power_settings_new</mat-icon>
+    </button>
 </mat-toolbar>
